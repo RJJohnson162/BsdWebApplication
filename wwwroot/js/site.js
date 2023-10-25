@@ -1,6 +1,6 @@
-﻿import express, { json } from "express";
-import { MongoClient } from "mongodb";
-import mongoose, { connect } from "mongoose";
+﻿const express = require("express");
+const { MongoClient } = require("mongodb");
+const mongoose = require("mongoose");
 const { model, Schema, models } = mongoose;
 
 const app = express();
@@ -81,7 +81,7 @@ async function connectToMongo() {
 }
 
 // Mongoose setup
-connect(mongoUri, mongoOptions);
+mongoose.connect(mongoUri, mongoOptions);
 
 // Define the Student schema
 const StudentSchema = new Schema(
@@ -100,7 +100,7 @@ const StudentSchema = new Schema(
 const Student = models.Student || model("Student", StudentSchema);
 
 // Middleware to parse JSON in requests
-app.use(json());
+app.use(express.json());
 
 // Define a route to save student data
 app.post("/Index", async (req, res) => {
