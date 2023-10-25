@@ -1,0 +1,85 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form action="/Index" class="text-center Overlay" id="studentForm" onsubmit="saveInfo(event)">
+    <!-- Modified the onsubmit attribute -->
+    <div class="card">
+        <span class="singup">Student Information</span>
+        <div class="inputBox1">
+            <input type="text" required="required" id="first_name"> <!-- Added id attribute -->
+            <span class="user">First Name</span>
+        </div>
+
+        <div class="inputBox">
+            <input type="text" required="required" id="last_name"> <!-- Added id attribute -->
+            <span>Last Name</span>
+        </div>
+
+        <div class="inputBox">
+            <input type="text" required="required" id="id_number"> <!-- Added id attribute -->
+            <span>ID Number</span>
+        </div>
+
+        <div class="Gender_choice">
+            <span class="title">Gender</span>
+            <div>
+                <label class="radio-button">
+                    <input type="radio" name="radio" class="input" value="Male">
+                    <span class="radio"></span>
+                    Male
+                </label>
+
+                <label class="radio-button">
+                    <input type="radio" name="radio" class="input" value="Female">
+                    <span class="radio"></span>
+                    Female
+                </label>
+            </div>
+        </div>
+
+        <div class="Course">
+            <span class="title">Courses Done</span>
+            <div class="Course_radio">
+                <label class="radio-button">
+                    <input type="radio" name="radio1" class="input" value="BSD">
+                    <span class="radio"></span>
+                    BSD
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="radio1" class="input" value="BIT">
+                    <span class="radio"></span>
+                    BIT
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="radio1" class="input" value="BISF">
+                    <span class="radio"></span>
+                    BSIF
+                </label>
+                <label class="radio-button">
+                    <input type="radio" name="radio1" class="input" value="BBIT">
+                    <span class="radio"></span>
+                    BBIT
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-53">
+            <div class="original">Submit</div>
+            <div class="letters">
+                <span>S</span>
+                <span>U</span>
+                <span>B</span>
+                <span>M</span>
+                <span>I</span>
+                <span>T</span>
+            </div>
+        </button>
+    </div>
+</form>
+
+<div id="displayData"></div>
+<!-- Include your external JavaScript file -->
+

@@ -1,0 +1,332 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    /*border: dotted 1px #fa0259;*/
+}
+
+/*__________FORM STYLING__________*/
+
+.Overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /*border: dotted 1px #fa0259;*/
+}
+
+.singup {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 1.5em;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    width: 350px;
+    flex-direction: column;
+    gap: 35px;
+    border-radius: 15px;
+    background: #e3e3e3;
+    box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
+    border-radius: 8px;
+}
+
+.inputBox,
+.inputBox1 {
+    position: relative;
+    width: 250px;
+}
+
+.inputBox input,
+.inputBox1 input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: #000;
+    font-size: 1em;
+    background: transparent;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transition: 0.1s;
+    border-bottom-left-radius: 8px;
+}
+
+.inputBox span,
+.inputBox1 span {
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    transform: translateY(-4px);
+    margin-left: 10px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 3px;
+    border-radius: 8px;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    transform: translateX(113px) translateY(-15px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #000;
+    letter-spacing: 0.2em;
+    color: #fff;
+    border: 2px;
+}
+
+.inputBox1 input:valid ~ span,
+.inputBox1 input:focus ~ span {
+    transform: translateX(113px) translateY(-15px);
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: #000;
+    letter-spacing: 0.2em;
+    color: #fff;
+    border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox1 input:valid,
+.inputBox1 input:focus {
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+/*___________GENDER RADIO BUTTONS___________*/
+.Gender_choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 250px;
+    border-bottom: solid 1px black;
+}
+
+.Gender_choice span{
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.input {
+    -webkit-appearance: none;
+    /* remove default */
+    display: block;
+    margin: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+    background-color: hsla(0,0%,0%,.2);
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 15%, rgba(0, 0, 0, 0.8) 28%, rgba(0, 0, 0, 0.9) 70%);
+    background-repeat: no-repeat;
+    -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1), -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+    outline: none;
+}
+.Gender_choice:nth-child(2){
+    margin-right: 10px;
+}
+
+.input:checked {
+    -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
+}
+
+.input:active {
+    -webkit-transform: scale(1.5);
+    -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
+}
+
+/* The up/down direction logic */
+
+.input,
+.input:active {
+    background-position: 0 24px;
+}
+
+.input:checked {
+    background-position: 0 0;
+}
+
+.input:checked ~ .input,
+.input:checked ~ .input:active {
+    background-position: 0 -24px;
+}
+
+/*__________COURSE CHOICE____________*/
+.Course{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    border-bottom: solid 1px black;
+}
+
+.title{
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: ease-in .4s;
+}
+
+.title:hover{
+    font-weight: normal;
+    letter-spacing: 4px;
+    transform: scale(1.2);
+}
+
+.Course_radio{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+/*___________BUTTON STYLING_____________*/
+
+.btn-53,
+.btn-53 *,
+.btn-53 :after,
+.btn-53 :before,
+.btn-53:after,
+.btn-53:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-53 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-color: #000;
+    background-image: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+}
+
+.btn-53:disabled {
+    cursor: default;
+}
+
+.btn-53:-moz-focusring {
+    outline: auto;
+}
+
+.btn-53 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-53 [hidden] {
+    display: none;
+}
+
+.btn-53 {
+    border: 1px solid;
+    border-radius: 999px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    padding: 1.2rem 3rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-53 .original {
+    background: #fff;
+    color: #000;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+    transform: translateY(100%);
+}
+
+.btn-53 .letters {
+    display: inline-flex;
+}
+
+.btn-53 span {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.btn-53 span:nth-child(2n) {
+    transform: translateY(15px);
+}
+
+.btn-53:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.btn-53:hover span:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.btn-53:hover span:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.btn-53:hover span:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.btn-53:hover span:nth-child(6) {
+    transition-delay: 0.5s;
+}
