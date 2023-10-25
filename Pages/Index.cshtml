@@ -4,25 +4,28 @@
     ViewData["Title"] = "Home page";
 }
 
+<!-- Form for student information -->
 <form action="/Index" class="text-center Overlay" id="studentForm" onsubmit="saveInfo(event)">
-    <!-- Modified the onsubmit attribute -->
     <div class="card">
+        <!-- TITLE -->
         <span class="singup">Student Information</span>
+        <!-- END OF TITLE -->
         <div class="inputBox1">
-            <input type="text" required="required" id="first_name"> <!-- Added id attribute -->
+            <input type="text" required="required" id="first_name">
             <span class="user">First Name</span>
         </div>
 
         <div class="inputBox">
-            <input type="text" required="required" id="last_name"> <!-- Added id attribute -->
+            <input type="text" required="required" id="last_name">
             <span>Last Name</span>
         </div>
 
         <div class="inputBox">
-            <input type="text" required="required" id="id_number"> <!-- Added id attribute -->
+            <input type="text" required="required" id="id_number">
             <span>ID Number</span>
         </div>
 
+        <!-- GENDER RADIO BUTTONS -->
         <div class="Gender_choice">
             <span class="title">Gender</span>
             <div>
@@ -40,6 +43,7 @@
             </div>
         </div>
 
+        <!-- COURSE RADION BUTTONS -->
         <div class="Course">
             <span class="title">Courses Done</span>
             <div class="Course_radio">
@@ -66,6 +70,7 @@
             </div>
         </div>
 
+        <!-- SUBMIT BUTTON -->
         <button type="submit" class="btn-53">
             <div class="original">Submit</div>
             <div class="letters">
@@ -80,6 +85,7 @@
     </div>
 </form>
 
+<!-- The div below demos the data requested to the mongoDB server -->
 <div id="displayData"></div>
-<!-- Include your external JavaScript file -->
+
 
